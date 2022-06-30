@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFundamentos Display Flex</title>
+    <style>
+      *{
+        margin: 10px;
+        color: white;
+        background-color: black;
+        border:white;
+      }
+      .flex{
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+
+      }
+      .flex2{
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-direction: row-reverse;
+
+      }
+      .flex3{
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .flex4{
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+      .flex5{
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .flex6{
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap-reverse;
+      }
+      .flex7{
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+      .flex8{
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+      .flex9{
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .flex10{
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .flex11{
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .flex12{
+        height: 250px;
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .flex13{
+        height: 250px;
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch
+      }
+      .flex14{
+        height: 250px;
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start
+      }
+      .flex15{
+        height: 250px;
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+      }
+      .flex16{
+        height: 250px;
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+      }
+      .flex17{
+        height: 250px;
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+      }
+      .flex18{
+        height: 250px;
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+      }
+      .flex19{
+        height: 250px;
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+      }
+      .flex20{
+        height: 250px;
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+      }
+      .flex21{
+        height: 250px;
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+      }
+      .flex22{
+        height: 250px;
+        max-width: 300px;
+        padding:10px;
+        border:2px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+      }
+      .item{
+        background-color: rgb(153, 60, 148);
+        margin: 5px;
+      }
+      .item2{
+        background-color: rgb(153, 60, 148);
+        margin: 5px;
+        text-align:center;
+        flex:1;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <h1>Fundamentos Display Flex</h1>
+    <b></b>
+    <h2>Parte 1 - flex conteiner</h2>
+    <b></b>
+    <h3>Display flex</h3>
+    <p>Transforma um item em "flex conteiner", bem como os filhos diretos desta tag</p>
+    <p>Abaixo a visualização de uma "div" contendo sete itens:</p>
+
+    <div class="">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+
+    </div>
+    <p>Por definição, as divs ocupam a tela inteira, ou seja, 100% do espaço do conteiner.</p>
+    <p> Ao modifcar para a classe "flex" e definir o display como "flex", o conteiner é iniciado e é respeitado o tamanho proporcional ao seu conteúdo, como visto abaixo:</p>
+
+    <div class="flex">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <p>É possível notar que ao colocar muitos itens dentro de um conteiner, alguns acabam vazando. Para resolver o problema, pode ser utilizado o Flex-Direction.</p>
+    <b></b>
+    <h3> Flex-Direction</h3>
+    <p>Por padrão, no eixo horizontal, os conteiners são apresentados da direita para a esquerda, da forma que está apresentado na imagem acima. Para colocar os itens ao contrário é utilizado o "flex-direction: row-reverse", como visto no exemplo abaixo. </p>
+
+    <div class="flex2">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+    </div>
+    <p> De forma análoga, ocorre para a disposição dos itens em colunas:</p>
+    <div class="flex3">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+
+    </div>
+    <p></p>
+    <div class="flex4">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+    </div>
+    <p></p>
+    <b></b>
+    <h3>Flex-Wrap</h3>
+    <p>Esta propriedade define a quebra de linha para os itens. Por padrão os itens não vêm com quebra de linhas, assim estes são compactados dentro do conteiner até não haver mais espaço e extravasar, como visto no segundo exemplo, este é o "nowrap".</p>
+    <p></p>
+    <p>A correção utilizando a quebra de linha é feita com "flex-wrap: wrap". Porém essa função sozinha gera problemas de espaçamento dentro do conteiner.</p>
+    <div class="flex5">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <p>A quebra de linha reversa na direção contrária é possível também.</p>
+    <div class="flex6">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <b></b>
+    <h3>Flex-Flow</h3>
+    <p>Funciona como atalho para as propriedades "flex-direction" e "flex-wrap", porém essa função não é muito utilizada. </p>
+    <h3>Justify content</h3>
+    <p>Essa propriedade é responsável por alinhar os itens dentro do container de acordo com a direção pretendida e tratar da distribuição entre eles. Ela não se aplica quando os itens já ocupam 100% do container.</p>
+
+    <p> As variações para essa propriedade são:
+    <p>flex-start: espaço ao início do container;</p>
+    <div class="flex7">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <p>flex-end: espaço ao final do container;</p>
+    <div class="flex8">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <p>center: ao centro do container;</p>
+    <div class="flex9">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <p>space-between: coloca um espaço menor entre os containers das pontas e distribui os espaços restantes entre os containers do centro; </p>
+    <div class="flex10">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+
+    </div>
+    <p>space-around: é utilizado espaçamento duas vezes maior para os elementos do meio em relação aos da ponta.</p>
+    <div class="flex11">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+    </div>
+    <b></b>
+    <h3>Align itens</h3>
+    <p>Trata do alinhamento dos "flex itens" de acordo com o eixo do container. O alinhamento é diferente para quando os itens estão em colunas ou linhas. Permite o alinhamento central no eixo vertical.</p>
+    <p>Tipos de alinhamento possíveis:
+      <p>center: alinhamento ao centro;</p> 
+      <div class="flex12">
+        <div class="item2">item 1</div>
+        <div class="item2">Lorem ipsum dolor sit amet</div>
+        <div class="item2">item 3</div>
+        
+      </div>
+      <p>stretch: é o alinhamento padrão, os flex itens crescem igualmente de acordo com o maior deles;</p>
+      <div class="flex13">
+        <div class="item2">item 1</div>
+        <div class="item2">Lorem ipsum dolor sit amet</div>
+        <div class="item2">item 3</div>
+        
+      </div>
+      <p>flex-start: alinhamento dos itens no início;</p>
+      <div class="flex14">
+        <div class="item2">item 1</div>
+        <div class="item2">Lorem ipsum dolor sit amet</div>
+        <div class="item2">item 3</div>
+        <div class="item2">item 4</div>
+        <div class="item2">item 5</div>
+        <div class="item2">item 6</div>
+        <div class="item2">item 7</div>
+        <div class="item2">item 8</div>
+        <div class="item2">item 9</div>
+      </div>
+      <p>flex-end: alinhamento dos itens no final;</p>
+      <div class="flex15">
+        <div class="item2">item 1</div>
+        <div class="item2">iLorem ipsum dolor sit amet</div>
+        <div class="item2">item 3</div>
+        <div class="item2">item 4</div>
+        <div class="item2">item 5</div>
+        <div class="item2">item 6</div>
+        <div class="item2">item 7</div>
+        <div class="item2">item 8</div>
+        <div class="item2">item 9</div>
+      </div>
+      <p>baseline: alinhamento de acordo com a linha base da tipografia dos itens.</p>
+      <div class="flex16">
+        <div class="item2">item 1</div>
+        <div class="item2">Lorem ipsum dolor sit amet</div>
+        <div class="item2">item 3</div>
+        <div class="item2">item 4</div>
+        <div class="item2">item 5</div>
+        <div class="item2">item 6</div>
+        <div class="item2">item 7</div>
+        <div class="item2">item 8</div>
+        <div class="item2">item 9</div>
+      </div>
+    </p>
+    <b></b>
+    <h3>Align content</h3>
+    <p>É a propriedade responsável por tratar o alinhamento das linhas do container em relação ao eixo vertical do container.</p>
+    <p>É necessário utilizar em conjunto o "flex-wrap" para quebrar as linhas dentro do container. Além disso, a altura do container deve ser maior que a soma das alturas das linhas dos itens.</p>
+    <p>center: alinhamento ao centro;</p> 
+    <div class="flex17"> 
+      <div class="item2">item 1</div>
+      <div class="item2">Lorem ipsum dolor sit amet</div>
+      <div class="item2">item 3</div>
+      
+    </div>
+    <p>stretch: é o alinhamento padrão, os flex itens crescem igualmente de acordo com o maior deles;</p>
+    <div class="flex18">
+      <div class="item2">item 1</div>
+      <div class="item2">Lorem ipsum dolor sit amet</div>
+      <div class="item2">item 3</div>
+    </div>
+    <p>flex-start: alinhamento dos itens no início;</p>
+    <div class="flex19">
+      <div class="item2">item 1</div>
+      <div class="item2">Lorem ipsum dolor sit amet</div>
+      <div class="item2">item 3</div>
+      <div class="item2">item 4</div>
+      <div class="item2">item 5</div>
+      <div class="item2">item 6</div>
+      <div class="item2">item 7</div>
+      <div class="item2">item 8</div>
+      <div class="item2">item 9</div>
+    </div>
+    <p>flex-end: alinhamento dos itens no final;</p>
+    <div class="flex20">
+      <div class="item2">item 1</div>
+      <div class="item2">iLorem ipsum dolor sit amet</div>
+      <div class="item2">item 3</div>
+      <div class="item2">item 4</div>
+      <div class="item2">item 5</div>
+      <div class="item2">item 6</div>
+      <div class="item2">item 7</div>
+      <div class="item2">item 8</div>
+      <div class="item2">item 9</div>
+    </div>
+    <p>space-between: cria um espaçamento igual entre os elementos e as bordas superiores e inferiores.</p>
+    <div class="flex21">
+      <div class="item2">item 1</div>
+      <div class="item2">Lorem ipsum dolor sit amet</div>
+      <div class="item2">item 3</div>
+      <div class="item2">item 4</div>
+      <div class="item2">item 5</div>
+      <div class="item2">item 6</div>
+      <div class="item2">item 7</div>
+      <div class="item2">item 8</div>
+      <div class="item2">item 9</div>
+    </div>
+    <p>space-around: os espaçamentos do meio são duas vezes maiores que o inicial e final.</p>
+    <div class="flex22">
+      <div class="item2">item 1</div>
+      <div class="item2">Lorem ipsum dolor sit amet</div>
+      <div class="item2">item 3</div>
+      <div class="item2">item 4</div>
+      <div class="item2">item 5</div>
+      <div class="item2">item 6</div>
+      <div class="item2">item 7</div>
+      <div class="item2">item 8</div>
+      <div class="item2">item 9</div>
+    </div>
+  </p>
+  <b></b>
+    <p>________________________________________________________________________</p>
+
+  </body>
+</html>
